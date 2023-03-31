@@ -2,12 +2,19 @@
 
 
 
-function submitForm(event){
+function submitForm(e){
     // IMPORTANTE! Ricorcarsi di disabilitare il comportamento "strano" o di default del FORM!!!
-    event.preventDefault();
+    e.preventDefault();
 
     // DA QUI IN POI POTETE FARE TUTTO COME PRIMA FACEVATE DENTRO LE FUNZIONI.
-    
+    validator();
+   
+
+};
+
+
+   function validator(){
+
     let userKm = document.getElementById('kmNumber').value;
     let userAge =document.getElementById('ageNumber').value;
     
@@ -15,12 +22,15 @@ function submitForm(event){
     const underTextSale = document.getElementById('saleUnderAge');
     
     const  overTextSale = document.getElementById('saleOverAge');
-
-
+    const enjoy = document.getElementById('enjoy');
+     
+     
+     
+     userKm = parseFloat(userKm).toFixed(2);
      console.log(userKm);
 
-     let euroKm = userKm * 21;
-     sales.innerHTML =`<span>${euroKm}$ </span>`
+     let euroKm = userKm * 0.21;
+     sales.innerHTML =`<span>${euroKm}$ Prezzo Pieno</span>`
 
      euroKm = parseFloat(euroKm).toFixed(2);
 
@@ -35,96 +45,23 @@ function submitForm(event){
        if(userAge < 18){
      
         console.log(applySale);
-        underTextSale.innerHTML = `<span>${applySale}$ </span>` ;
+        underTextSale.innerHTML = `<span>${applySale}$ Sconto per Under 18 </span>` ;
         
     }else if(userAge >= 65){
     
         
-        overTextSale.innerHTML = `<span>${applyOverSale}$ </span>`;
+        overTextSale.innerHTML = `<span>${applyOverSale}$ Sconto per Over 65</span>`;
         console.log(applyOverSale);
-    
-    }else if(userAge >= 18  ){
-    
-        enjoy.innerText = 'Buon viaggio!'
-        console.log('buon viaggio');
     
     }else{
     
-        alert("input non valido!");
+        enjoy.innerText = 'Buon viaggio!';
+        console.log('buon viaggio');
+    
     };
  
-
-};
-
-
-   
-
-
-   
-  /* //calcolo km to euro
-   let euroKm = userKm * 0.21;
-   
-    ;
-
-   
-   //calcolo la percentuale
-       
-
-
-   //validazione
-   let isUserKm = !isNaN(userKm);
-   let isUserAge = !isNaN(userAge);
-   
-   if(isUserKm && isUserAge ){
-     
-     euroKm = parseFloat(euroKm).toFixed(2);
-     userAge = parseFloat(userAge);
-   
-   }if(userAge < 18){
-     
-       console.log(applySale);
-       underTextSale.innerHTML = `<span>${applySale}$ </span>` ;
-       
-   }else if(userAge >= 65){
-   
-       
-       overTextSale.innerHTML = `<span>${applyOverSale}$ </span>`;
-       console.log(applyOverSale);
-   
-   }else if(userAge >= 18  ){
-   
-       enjoy.innerText = 'Buon viaggio!'
-       console.log('buon viaggio');
-   
-   }else{
-   
-       alert("input non valido!");
    };
 
-
-
-
-
-
-
-
-//applico le varie percentuali 
-/*if(age < 18){
-    
-
-    console.log(applySale);
-    underTextSale.innerHTML = `<span>${applySale}$ </span>` ;
-    
-}else if(age >= 65){
-
-    
-    overTextSale.innerHTML = `<span>${applyOverSale}$ </span>`;
-    console.log(applyOverSale);
-
-}else{
-    enjoy.innerText = 'Buon viaggio!'
-    console.log('buon viaggio');
-}*/
 
 
 

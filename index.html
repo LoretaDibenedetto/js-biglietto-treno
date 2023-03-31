@@ -14,24 +14,24 @@
 <body>
    <div class="container">
         <div class="row">
-            <div class="col-12 mt-5">
+            <div class="col-lg-12 mt-5">
                 <h1 class="text-info text-center">Compra il tuo biglietto</h1>
-           <div class="card  shadow mt-5 my-5 ">
+           <div class="card img shadow mt-5 my-5 ">
            
 
                <form class="m-5" onsubmit="submitForm(event)">
-                   <label class="form-label" for="kmNumber">seleziona km</label><br>
-                   <input class="form-control " type="number" id="kmNumber" name="chosenNumber" value="0"><br>
-                   <label class="form-label" for="ageNumber">inserisci anni</label><br>
-                   <input class="form-control" type="number" id="ageNumber" name="chosenNumber" value="0"><br>
+                   <label class="form-label text-info fw-medium fs-3" for="kmNumber">Seleziona km da percorrere:</label>
+                   <input class="form-control" type="number" id="kmNumber" name="chosenNumber" >
+                   <label class="form-label text-info fw-medium fs-3 mt-4" for="ageNumber">Inserisci la tua eta':</label>
+                   <input class="form-control" type="number" id="ageNumber" name="chosenNumber" >
                    
-                   <br> <br>
-                   <input  class="btn btn-info" type="submit" value="scopri">  
-                   <p class="text-success " id="Price"> </p>
-                   <p class="text-success " id="saleUnderAge"> </p>
-                   <p class="text-success " id="saleOverAge"> </p>
-                 
-               
+                   
+                   <input  class="btn btn-success mt-4" type="submit" value="Calcola Sconto">  
+                   <div class="text-success mt-5 " id="Price"> </div>
+                   <div class="text-success mt-3" id="saleUnderAge"> </div>
+                   <div class="text-success mt-3" id="saleOverAge"> </div>
+                   <div class="text-success mt-3" id="enjoy"></div>
+                  
                
              </form>
 
