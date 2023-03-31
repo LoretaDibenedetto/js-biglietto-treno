@@ -22,15 +22,17 @@
                <form class="m-5" onsubmit="submitForm(event)">
                    <label class="form-label text-info fw-medium fs-3" for="kmNumber">Seleziona km da percorrere:</label>
                    <input class="form-control" type="number" id="kmNumber" name="chosenNumber" >
+                    <div id="error"></div>
+
                    <label class="form-label text-info fw-medium fs-3 mt-4" for="ageNumber">Inserisci la tua eta':</label>
                    <input class="form-control" type="number" id="ageNumber" name="chosenNumber" >
-                   
+                   <div id="error2"></div>
                    
                    <input  class="btn btn-success mt-4" type="submit" value="Calcola Sconto">  
-                   <div class="text-success mt-5 " id="Price"> </div>
-                   <div class="text-success mt-3" id="saleUnderAge"> </div>
-                   <div class="text-success mt-3" id="saleOverAge"> </div>
-                   <div class="text-success mt-3" id="enjoy"></div>
+                   <div class="text-success mt-5  " id="Price"> </div>
+                   <div class="text-success mt-3 " id="saleUnderAge"> </div>
+                   <div class="text-success mt-3  " id="saleOverAge"> </div>
+                   <div class="text-success mt-3 " id="enjoy"></div>
                   
                
              </form>

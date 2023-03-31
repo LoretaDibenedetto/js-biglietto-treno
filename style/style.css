@@ -10,3 +10,8 @@ body{
     background-size: 600px;
   
 }
+
+.input-error{
+    border-color: red;
+    box-shadow: 5px 5px 15px -5px #fa5b5b;
+}
